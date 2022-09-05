@@ -24,6 +24,7 @@ export default function PokemonInventory(props) {
       !(catchedPokeData.length === 0) && catchedPokeData.map(item => {
         return(
           <PokemonInventoryTile 
+          key = {item.id}
           img = {item.sprites.front_default}
           name = {item.forms[0].name}
           type = {item.types[0].type.name}

@@ -43,7 +43,7 @@ export default function RandomPokemon(props) {
       e.target.value = "";
     }
   }
- 
+  
   const randomPokemonCall = () => {
     axios({
       url : `https://pokeapi.co/api/v2/pokemon/${rand()}`,
@@ -51,7 +51,7 @@ export default function RandomPokemon(props) {
     })
     .then((res) => {
       props.pokeDataHandler(res.data)
-      console.log("yes")
+      // console.log("yes")
     })
     .catch(err => {console.log(err)})
     setMessage("")
@@ -61,7 +61,6 @@ export default function RandomPokemon(props) {
   return (
     <div className='random-pokemon-box'> 
       <div >
-        Random Pokemon appeared -
         <button disabled = {isSpawned ? true : false} onClick={onButton} >Spawn New Pokemon!</button>
         <div className='random-pokemon-img-slide'>
         {(props.pokeData.length !== 0) && <img src={props.pokeData.sprites.front_default} alt="" />}
@@ -72,7 +71,7 @@ export default function RandomPokemon(props) {
       <div>
         <div className='random-pokemon-input'>
           <label htmlFor="pokemonGuess">  
-            Write the name of pokemon to catch:
+            Guess the name of pokemon to catch:
           </label>
           
           <input type="text" name='pokemonGuess' onKeyDown={toPokeInventory} />
