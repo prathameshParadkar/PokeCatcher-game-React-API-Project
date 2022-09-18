@@ -43,13 +43,13 @@ Open http://localhost:3000 to view it in your browser.
 #### Get all pokemon list (limit of 20)
 
 ```http
-  GET /pokeapi.co/api/v2/pokemon/
+  https://pokeapi.co/api/v2/pokemon/
 ```
 
 #### Get one pokemon (e.g - pikachu)
 
 ```http
-  GET /pokeapi.co/api/v2/pokemon/pikachu
+  https://pokeapi.co/api/v2/pokemon/pikachu
 ```
 
 
